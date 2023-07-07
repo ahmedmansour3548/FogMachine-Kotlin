@@ -4,7 +4,204 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de730d99-5bdf-487e-909a-4c22f875643d" name="Changes" comment="" />
+    <list default="true" id="de730d99-5bdf-487e-909a-4c22f875643d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/-c-o-a-r-s-e/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/-f-i-n-e/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/-m-e-d-i-u-m/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/-s-u-p-e-r_-c-o-a-r-s-e/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/-s-u-p-e-r_-d-u-p-e-r_-c-o-a-r-s-e/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/value-of.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-coarseness/values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/-c-o-a-r-s-e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/-f-i-n-e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/-fog-builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/-m-e-d-i-u-m.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/-s-u-p-e-r_-c-o-a-r-s-e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/-s-u-p-e-r_-d-u-p-e-r_-c-o-a-r-s-e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/handle-list-hole-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/handle-list-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/handle-number-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/handle-pair-hole-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/handle-string-hole-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/handle-string-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/holes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/mutable-holes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/mutable-lng-lat-holes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/mutable-path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/mutable-properties.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/mutable-zone-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/path-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/properties.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/z-c-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-builder/zone-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-d-s-l/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine-exception/-fog-machine-exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine-exception/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/-fog-machine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/bottom-left.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/bottom-right.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/buffered-writer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/generate-myst-fog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/generate-zone-fog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/geo-j-s-o-n-file.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/insert-properties.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/top-left.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/top-right.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-machine/validate-path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-fog-type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/-myst-hole-builder/-myst-hole-builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/-myst-hole-builder/build.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/-myst-hole-builder/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/-myst.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/holes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/properties.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-myst/zone-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/-zone-hole-builder/-zone-hole-builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/-zone-hole-builder/build.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/-zone-hole-builder/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/-zone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/holes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/latitude.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/longitude.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/properties.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/tyle-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/-zone/zone-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-fog-type/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/-hole-builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/coords-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/ids-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/ids.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/mutable-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole-builder/mutable-ids.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole/-hole.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole/coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole/ids.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-hole/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/-myst-builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/build.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/handle-list-hole-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/handle-list-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/handle-number-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/handle-pair-hole-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/handle-string-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-myst-builder/reverse-cantor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-p-r-o-p-e-r-t-i-e-s/-p-r-o-p-e-r-t-i-e-s.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-p-r-o-p-e-r-t-i-e-s/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-p-r-o-p-e-r-t-i-e-s/property.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-p-r-o-p-e-r-t-i-e-s/value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/-properties-builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/build.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/mutable-name.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/mutable-value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/name-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/name.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/value-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-properties-builder/value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-property/-property.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-property/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-property/name.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-property/value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-tyle/-coarse-tyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-tyle/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-tyle/tyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-tyle/zone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-zone/-coarse-zone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-zone/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-zone/tyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarse-zone/zone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/-coarseness-start.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/tyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coarseness-start/zone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lat/-coord-lat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lat/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lat/lat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lat/lng.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lng/-coord-lng.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lng/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lng/lat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coord-lng/lng.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/-coords-start.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/lat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-coords-start/lng.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/-zone-builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/build.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/coord.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/handle-list-hole-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/handle-list-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/handle-number-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/handle-pair-hole-coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/handle-string-hole-i-ds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/lat-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/latitude.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/lng-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/longitude.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/mutable-latitude.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/mutable-longitude.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/mutable-tyle-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/t-c-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/-zone-builder/tyle-coarseness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/myst.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/[root]/zone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/-fog-machine/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/anchor-copy-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/arrow_down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/copy-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/copy-successful-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/footer-go-to-link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/go-to-top-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/logo-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/abstract-class-kotlin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/abstract-class.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/annotation-kotlin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/annotation.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/class-kotlin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/class.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/enum-kotlin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/enum.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/exception-class.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/field-value.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/field-variable.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/function.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/interface-kotlin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/interface.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/nav-icons/object.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/images/theme-toggle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/navigation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/clipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/navigation-loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/pages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/platform-content-handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/prism.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/sourceset_dependencies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/scripts/symbol-parameters-wrapper_deferred.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/styles/jetbrains-mono.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/styles/logo-styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/styles/prism.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api/styles/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FogMachine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FogMachine.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +249,9 @@
         <option value="Kotlin Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="KotlinCodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
@@ -275,7 +475,9 @@
       <workItem from="1688483414637" duration="14585000" />
       <workItem from="1688592956464" duration="23602000" />
       <workItem from="1688621038368" duration="2122000" />
-      <workItem from="1688699323163" duration="1632000" />
+      <workItem from="1688699323163" duration="2130000" />
+      <workItem from="1688737659038" duration="173000" />
+      <workItem from="1688741118842" duration="981000" />
     </task>
     <servers />
   </component>

@@ -424,7 +424,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             }
         }
         /**
-         * Nested Class to handle Zone Coarseness if Tyle Coarseness was specified first.
+         * Nested Class to handle Tyle Coarseness if Zone Coarseness was specified first.
          *
          * (Ex. `coarseness zone COARSE tyle MEDIUM`)
          */
