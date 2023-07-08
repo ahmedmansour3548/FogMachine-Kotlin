@@ -632,7 +632,7 @@ td:first-child {
 }
 
 .brief {
-    white-space: pre-wrap;
+    white-space: inherit;
     overflow: hidden;
 }
 
