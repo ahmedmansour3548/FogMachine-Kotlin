@@ -110,7 +110,7 @@ zone {
             <pre>
             <code>
 myst {
-  path = "myst.geojson"
+  path = "/C/Users/AAM/Desktop/myst.geojson"
   zoneCoarseness = Coarseness.MEDIUM
   holes {
       coordinates = Pair("-73.973", "40.773")
@@ -129,7 +129,7 @@ myst {
 }</code>
 </pre>
 <br>
-            Result: Creates a <a href="/Myst.html">Myst</a> that covers the Earth except for two adjacent Zones at longitude -73.973, latitude 40.773. The Zone
+            Result: Creates a <a href="/Myst.html">Myst</a> GeoJSON file on the Desktop that covers the Earth except for two adjacent Zones at longitude -73.973, latitude 40.773. The Zone
             ID 28037605974 was generated using a modified <a href="https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function">Cantor Pairing Function</a>.
             <br>
             <pre>
@@ -155,7 +155,7 @@ zone {
 }</code>
 </pre>
 <br>
-            Result: Creates a <a href="/zone.html">Zone</a> with its bottom left corner at longitude -73.97, latitude 40.77, and with numerous holes.
+            Result: Creates a <a href="/zone.html">Zone</a> GeoJSON file with its bottom left corner at longitude -73.97, latitude 40.77, and with numerous holes.
             Note the infix functions used to define the starting coordinate as well as the coarseness. Also note the flexibility of allowed data types for
             numerical values, and the ability to set property values as JSONArrays and boolean values. It is recommended to use 
             <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a> or String representations for numerical values as
