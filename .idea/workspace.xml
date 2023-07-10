@@ -6,163 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="de730d99-5bdf-487e-909a-4c22f875643d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/COARSE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/COARSE/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/Coarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/Coarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/FINE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/FINE/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/MEDIUM/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/MEDIUM/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/SUPER_COARSE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/SUPER_COARSE/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/SUPER_DUPER_COARSE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/SUPER_DUPER_COARSE/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/valueOf.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/valueOf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Coarseness/values.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/values.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FogBuilder/COARSE.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/COARSE.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FogBuilder/FINE.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/FINE.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/FogBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/FogBuilder.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FogBuilder/MEDIUM.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/MEDIUM.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FogBuilder/SUPER_COARSE.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/SUPER_COARSE.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FogBuilder/SUPER_DUPER_COARSE.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/SUPER_DUPER_COARSE.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/handleListHoleCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/handleListHoleCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/handleListHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/handleListHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/handleNumberHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/handleNumberHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/handlePairHoleCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/handlePairHoleCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/handleStringHoleCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/handleStringHoleCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/handleStringHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/handleStringHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/holes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/holes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FogBuilder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FogBuilder/mutableHoles.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/mutableHoles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/mutableLngLatHoles.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/mutableLngLatHoles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/mutablePath.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/mutablePath.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/mutableProperties.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/mutableProperties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/mutableZoneCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/mutableZoneCoarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/path.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/path.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/pathSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/pathSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/properties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/zCSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/zCSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogBuilder/zoneCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogBuilder/zoneCoarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogDSL/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogDSL/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/FogMachine.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/FogMachine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/bottomLeft.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/bottomLeft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/bottomRight.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/bottomRight.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/bufferedWriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/bufferedWriter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/generateMystFog.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/generateMystFog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/generateZoneFog.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/generateZoneFog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/geoJSONFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/geoJSONFile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/insertProperties.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/insertProperties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/topLeft.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/topLeft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/topRight.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/topRight.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachine/validatePath.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachine/validatePath.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachineException/FogMachineException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachineException/FogMachineException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogMachineException/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogMachineException/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/FogType.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/FogType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/Myst.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/Myst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/MystHoleBuilder/MystHoleBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/MystHoleBuilder/MystHoleBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/MystHoleBuilder/build.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/MystHoleBuilder/build.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/MystHoleBuilder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/MystHoleBuilder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/holes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/holes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/path.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/path.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/properties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Myst/zoneCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Myst/zoneCoarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/Zone.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/Zone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/ZoneHoleBuilder/ZoneHoleBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/ZoneHoleBuilder/ZoneHoleBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/ZoneHoleBuilder/build.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/ZoneHoleBuilder/build.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/ZoneHoleBuilder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/ZoneHoleBuilder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/holes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/holes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/latitude.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/latitude.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/longitude.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/longitude.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/path.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/path.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/properties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/tyleCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/tyleCoarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/Zone/zoneCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/Zone/zoneCoarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FogType/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FogType/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Hole/Hole.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Hole/Hole.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Hole/coordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Hole/coordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Hole/ids.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Hole/ids.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Hole/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Hole/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/HoleBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/HoleBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/coordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/coordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/coordsSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/coordsSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/ids.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/ids.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/idsSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/idsSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/mutableCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/mutableCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HoleBuilder/mutableIds.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HoleBuilder/mutableIds.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/MystBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/MystBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/build.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/build.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/handleListHoleCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/handleListHoleCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/handleListHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/handleListHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/handleNumberHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/handleNumberHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/handlePairHoleCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/handlePairHoleCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/handleStringHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/handleStringHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MystBuilder/reverseCantor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MystBuilder/reverseCantor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PROPERTIES/PROPERTIES.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PROPERTIES/PROPERTIES.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PROPERTIES/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PROPERTIES/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PROPERTIES/property.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PROPERTIES/property.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PROPERTIES/value.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PROPERTIES/value.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/PropertiesBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/PropertiesBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/build.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/build.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/mutableName.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/mutableName.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/mutableValue.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/mutableValue.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/name.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/name.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/nameSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/nameSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/value.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/value.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PropertiesBuilder/valueSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PropertiesBuilder/valueSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Property/Property.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Property/Property.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Property/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Property/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Property/name.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Property/name.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Property/value.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Property/value.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/CoarseTyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/CoarseTyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/tyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/tyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/zone.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseTyle/zone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/CoarseZone.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/CoarseZone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/tyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/tyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/zone.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarseZone/zone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarsenessStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/CoarsenessStart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/tyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/tyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/zone.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoarsenessStart/zone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/CoordLat.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/CoordLat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/lat.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/lat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/lng.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLat/lng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/CoordLng.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/CoordLng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/lat.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/lat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/lng.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordLng/lng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordsStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/CoordsStart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/lat.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/lat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/lng.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/CoordsStart/lng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/ZoneBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/ZoneBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/build.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/build.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/coarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/coarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/coord.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/coord.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/handleListHoleCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/handleListHoleCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/handleListHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/handleListHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/handleNumberHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/handleNumberHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/handlePairHoleCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/handlePairHoleCoordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/handleStringHoleIDs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/handleStringHoleIDs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/latSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/latSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/latitude.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/latitude.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/lngSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/lngSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/longitude.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/longitude.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/mutableLatitude.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/mutableLatitude.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/mutableLongitude.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/mutableLongitude.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/mutableTyleCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/mutableTyleCoarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/tCSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/tCSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/tyleCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/tyleCoarseness.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/myst.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/myst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/styles/logo-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/styles/logo-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zone.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zone.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/FogMachine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FogMachine.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -442,7 +292,7 @@
       <workItem from="1688737659038" duration="173000" />
       <workItem from="1688741118842" duration="981000" />
       <workItem from="1688751337288" duration="10000" />
-      <workItem from="1688781122423" duration="20536000" />
+      <workItem from="1688781122423" duration="21517000" />
     </task>
     <servers />
   </component>

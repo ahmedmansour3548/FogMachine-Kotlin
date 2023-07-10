@@ -813,47 +813,26 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
      * adjusted to longitude/latitude coordinates. [value] must be a natural number (i.e an integer > 0).
      * @param value The value to be used in the Inverse Cantor Pairing Function.
      * @throws FogMachineException if [value] is not a natural number.
-     *  * - `FINE` -               0.0001 DD
-     *  * - `MEDIUM` -             0.001 DD
-     *  * - `COARSE` -             0.01 DD
-     *  * - `SUPER_COARSE` -       0.1 DD
-     *  * - `SUPER_DUPER_COARSE` - 1 DD
      */
     private fun inverseCantor(value: BigDecimal) : Pair<BigDecimal, BigDecimal> {
         if (value < BigDecimal.ONE || value.scale() != 0)
             throw FogMachineException("Hole ID invalid!. IDs may only be natural numbers! $value")
-
         val multiplicand = BigDecimal.ONE.movePointLeft(zoneCoarseness.ordinal)
-
         val t = floor(
             (-BigDecimal.ONE + BigDecimal(sqrt((BigDecimal.ONE + BigDecimal.valueOf(8) * value).toDouble()))
                 .divide(BigDecimal.valueOf(2), RoundingMode.FLOOR)
             ).toDouble())
-
         val lng = (BigDecimal(t).multiply(BigDecimal(t + 3)).divide(BigDecimal.valueOf(2)))
             .subtract(value)
             .multiply(multiplicand)
             .subtract(BigDecimal.valueOf(180))
-
         val lat = (value - BigDecimal(t).multiply(BigDecimal(t + 1)).divide(BigDecimal.valueOf(2)))
             .multiply(multiplicand)
             .subtract(BigDecimal.valueOf(90))
-
         if (lng < BigDecimal.valueOf(-180) || lng > BigDecimal.valueOf(180)
             || lat < BigDecimal.valueOf(-90) || lat > BigDecimal.valueOf(90))
             throw FogMachineException("Hole ID invalid! Decoded Latitude/Longitude values were out of valid range.")
         return Pair(lng, lat)
-        //-73.459 40.874
-        //val multiplicand = BigDecimal("0.1")
-        /*val multiplicand = BigDecimal.ONE.movePointLeft(zoneCoarseness.ordinal - 1)
-        val t: Int = floor((-1 + sqrt((1 + 8 * value).toDouble())) / 2).toInt()
-        lng = BigDecimal(t * (t + 3) / 2 - value)
-            .multiply(multiplicand)
-            .minus(BigDecimal(180))
-        lat = BigDecimal(value - t * (t + 1) / 2)
-            .multiply(multiplicand)
-            .minus(BigDecimal(90))
-        return Pair(lng, lat)*/
     }
 }
 

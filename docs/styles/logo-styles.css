@@ -7,9 +7,8 @@
 .library-name a::before {
     content: '';
     background: url("../images/AAM.png") center no-repeat;
-    background-size: 100px;
+    background-size: 95px;
     position: absolute;
-    margin-right: 100px;
     width: 95px;
     height: 67px;
     top: -23px;
