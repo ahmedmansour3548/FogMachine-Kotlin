@@ -3,7 +3,7 @@
 @import url('jetbrains-mono.css');
 
 :root {
-    --default-gray: #f4f4f4;
+    --default-gray: #7a7a7a;
     --default-font-color: black;
     --header-font-color: var(--default-font-color);
 
@@ -50,6 +50,10 @@
 }
 
 :root.theme-dark {
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, grey 1px, transparent 1px),
+        linear-gradient(to bottom, grey 1px, transparent 1px);
     --background-color: #27282c;
     --color-dark: #3d3d41;
     --default-font-color: hsla(0, 0%, 100%, 0.8);
@@ -85,7 +89,7 @@ html {
 }
 
 html ::-webkit-scrollbar {
-    width: 8px;
+    width: 15px;
     height: 8px;
 }
 
