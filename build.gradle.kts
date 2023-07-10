@@ -20,10 +20,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    // https://mvnrepository.com/artifact/org.json/json
     implementation("org.json:json:20230618")
     implementation(kotlin("stdlib-jdk8"))
-
 }
 
 tasks.test {

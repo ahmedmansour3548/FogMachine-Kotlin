@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de730d99-5bdf-487e-909a-4c22f875643d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Coarseness/COARSE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/COARSE/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Coarseness/Coarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/Coarseness.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Coarseness/FINE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Coarseness/FINE/index.html" afterDir="false" />
@@ -159,10 +161,9 @@
       <change beforePath="$PROJECT_DIR$/docs/ZoneBuilder/tyleCoarseness.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ZoneBuilder/tyleCoarseness.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/myst.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/myst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/scripts/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/scripts/pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/scripts/sourceset_dependencies.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/scripts/sourceset_dependencies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/styles/logo-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/styles/logo-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/zone.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FogMachine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FogMachine.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +248,7 @@
       <command value="gradle dependencies" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.FogMachine [dokkaHtml]">
+  <component name="RunManager" selected="Gradle.FogMachine [run]">
     <configuration name="FogMachine [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -388,10 +389,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FogMachine [run]" />
         <item itemvalue="Gradle.FogMachine [dokkaHtml]" />
         <item itemvalue="Gradle.FogMachine [clean]" />
         <item itemvalue="Gradle.FogMachine [dokkaGfm]" />
-        <item itemvalue="Gradle.FogMachine [run]" />
         <item itemvalue="Gradle.FogMachine [javadoc]" />
       </list>
     </recent_temporary>
@@ -441,6 +442,7 @@
       <workItem from="1688737659038" duration="173000" />
       <workItem from="1688741118842" duration="981000" />
       <workItem from="1688751337288" duration="10000" />
+      <workItem from="1688781122423" duration="20536000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
   <title>FogMachine</title>
-  <link href="images/logoIcon.svg" rel="icon" type="image/svg">
+  <link href="images/favicon.png" rel="icon" type="image/png">
   <script>var pathToRoot = "";</script>
   <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -38,7 +38,9 @@
     <div id="leftToggler"><span class="icon-toggler"></span></div>
     <div class="library-name">
       <a href="index.html">
-        <span>FogMachine</span>
+        <span style="
+        margin-left: 50px;
+    ">FogMachine</span>
       </a>
     </div>
     <div>
@@ -62,6 +64,105 @@
         <div class="breadcrumbs"></div>
         <div class="cover ">
           <h1 class="cover"><span>Fog</span><wbr></wbr><span><span>Machine</span></span></h1>
+          <div class="brief ">
+            <p class="paragraph">The Fog Machine is a simple, black box library designed to generate <a href="https://geojson.org/">GeoJSON</a> files that
+              comprise of square Polygons or MultiPolygons with square holes. It offers extensive customization by leveraging Kotlin's DSL functionality.
+              Below are a few examples of how to use this program, and their expected results. The generated GeoJSON file and reference image can be found 
+              <a>here.</a>
+              <br>
+              <pre>
+              <code>
+zone {
+  path = "zone"
+  longitude = "-73.98"
+  latitude = 40.77
+  tyleCoarseness = Coarseness.MEDIUM
+  zoneCoarseness = Coarseness.COARSE
+  holes {
+      coordinates = listOf(Pair("-73.974", "40.776"), Pair("-73.973", "40.776"))
+      ids = 5
+  }
+  properties {
+      property {
+          name = "prop1"
+          value = 0
+      }
+      property {
+          name = "prop2"
+          value = JSONObject("""
+              {
+                  "city": "New York",
+                  "country": USA,
+                  "park": "Central Park"
+              }
+              """.trimIndent())
+      }
+  }
+}</code>
+</pre>
+<br>
+            Result: Creates a <a href="/zone.html">Zone</a> GeoJSON file in the current directory with name "zone.geojson". Its bottom left corner is at 
+            longitude -73.98, latitude 40.77. It includes 3 holes, one at Tyle ID: 5. and two adjacent ones at longitude -73.974, latitude 40.776 
+            and longitude -73.973, latitude 40.776. It also inserts properties into each Tyle Polygon, one being a Number and another a 
+            <a href="https://stleary.github.io/JSON-java/org/json/JSONObject.html">JSONObject</a>. Note that the longitude and latitude can be 
+            any numerical represented object, such as Floats, Doubles, or Strings.
+            <br>
+            <pre>
+            <code>
+myst {
+  path = "myst.geojson"
+  zoneCoarseness = Coarseness.MEDIUM
+  holes {
+      coordinates = Pair("-73.973", "40.773")
+      ids = 28037605974
+  }
+  properties {
+      property {
+          name = "prop1"
+          value = "value1"
+      }
+      property {
+          name = "prop2"
+          value = null
+      }
+  }
+}</code>
+</pre>
+<br>
+            Result: Creates a <a href="/Myst.html">Myst</a> that covers the Earth except for two adjacent Zones at longitude -73.973, latitude 40.773. The Zone
+            ID 28037605974 was generated using a modified <a href="https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function">Cantor Pairing Function</a>.
+            <br>
+            <pre>
+            <code>
+zone {
+  path = "zone2.geojson"
+  coord lng -73.97  lat "40.77"
+  coarseness tyle FINE zone MEDIUM
+  holes {
+      coordinates = "-73.9692, 40.7705"
+      ids = listOf(85, "86", 95, 96)
+  }
+  properties {
+      property {
+          name = "prop1"
+          value = JSONArray("[23, 55, 13]")
+      }
+      property {
+          name = "prop2"
+          value = true
+      }
+  }
+}</code>
+</pre>
+<br>
+            Result: Creates a <a href="/zone.html">Zone</a> with its bottom left corner at longitude -73.97, latitude 40.77, and with numerous holes.
+            Note the infix functions used to define the starting coordinate as well as the coarseness. Also note the flexibility of allowed data types for
+            numerical values, and the ability to set property values as JSONArrays and boolean values. It is recommended to use 
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a> or String representations for numerical values as
+            often as possible to reduce unintended behavior due to rounding errors.
+            <br>
+            </p>
+          </div>
         </div>
         <div class="tabbedcontent">
           <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active=""
@@ -142,8 +243,7 @@
                 <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
                   <div class="main-subrow keyValue ">
                     <div class=""><span class="inline-flex">
-                        <div><a
-                            href="FogDSL/index.html"><span>Fog</span><wbr></wbr><span><span>DSL</span></span></a>
+                        <div><a href="FogDSL/index.html"><span>Fog</span><wbr></wbr><span><span>DSL</span></span></a>
                         </div>
                         <span class="anchor-wrapper"><span class="anchor-icon"
                             pointing-to="-305972029%2FClasslikes%2F769193423"></span>
@@ -251,8 +351,7 @@
                 <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
                   <div class="main-subrow keyValue ">
                     <div class=""><span class="inline-flex">
-                        <div><a
-                            href="FogType/index.html"><span>Fog</span><wbr></wbr><span><span>Type</span></span></a>
+                        <div><a href="FogType/index.html"><span>Fog</span><wbr></wbr><span><span>Type</span></span></a>
                         </div>
                         <span class="anchor-wrapper"><span class="anchor-icon"
                             pointing-to="257411176%2FClasslikes%2F769193423"></span>
@@ -270,7 +369,8 @@
                             <div class="brief ">
                               <p class="paragraph">A super Class that defines the two types of supported GeoJSON types:
                                 <a href="FogType/Zone/index.html">FogType.Zone</a> and <a
-                                  href="FogType/Myst/index.html">FogType.Myst</a>.</p>
+                                  href="FogType/Myst/index.html">FogType.Myst</a>.
+                              </p>
                             </div>
                           </div>
                         </div>

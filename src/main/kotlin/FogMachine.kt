@@ -1,3 +1,4 @@
+
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.BufferedWriter
@@ -5,6 +6,7 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
 import java.math.BigDecimal
+import java.math.BigInteger
 import java.math.RoundingMode
 import java.util.*
 import kotlin.math.floor
@@ -83,13 +85,13 @@ private class FogMachine {
         if (geoJSONFile.parentFile != null) geoJSONFile.parentFile.mkdirs()
 
         if (geoJSONFile.exists() && !geoJSONFile.canWrite())
-            throw FogMachineException("Error: Access denied to write file at $path")
+            throw FogMachineException("Access denied to write file at $path")
 
         try {
             bufferedWriter = File(path).bufferedWriter()
         }
         catch (fnf : FileNotFoundException) {
-            throw FogMachineException("Error: Access denied to create file at $path")
+            throw FogMachineException("Access denied to create file at $path")
         }
     }
     /**
@@ -131,7 +133,6 @@ private class FogMachine {
                                                     "[${bottomRight.first.stripTrailingZeros().toPlainString()}," +
                                                     "${bottomRight.second.stripTrailingZeros().toPlainString()}]]")
 
-
                         bufferedWriter.append("]},\"properties\":{")
                         // Insert any specified properties into each Tyle
                         if (zone.properties.isNotEmpty()) insertProperties(zone.properties)
@@ -144,7 +145,7 @@ private class FogMachine {
             bufferedWriter.flush()
         }
         catch (io: IOException) {
-            throw FogMachineException("ERROR: An error occurred while generating GeoJSON file.", io)
+            throw FogMachineException("An error occurred while generating GeoJSON file.", io)
         }
     }
 
@@ -202,7 +203,7 @@ private class FogMachine {
             bufferedWriter.append("}}]}")
         }
         catch (io: IOException) {
-            throw(FogMachineException("ERROR: An error occurred while generating GeoJSON file.", io))
+            throw(FogMachineException("An error occurred while generating GeoJSON file.", io))
         }
     }
 
@@ -277,7 +278,10 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
     /**
      * The Longitude of the Zone, which is at the bottom left starting point. Any [BigDecimal] supported datatype
      * is also supported.
-     * @throws FogMachineException If Latitude was already set or is being set with an unsupported type.
+     * @throws FogMachineException If:
+     *  - Longitude was already set.
+     *  - It is being set with an unsupported type.
+     *  - Given scale (i.e. number of significant decimal places) is larger than the Zone Coarseness scale.
      */
     var longitude: Any                                                                                             /***/
         get() = mutableLongitude                                                                                   /***/
@@ -286,21 +290,24 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
                 mutableLongitude = BigDecimal(value.toString())                                                    /***/
                     .takeIf { !lngSet }                                                                            /***/
                     .also { lngSet = true }                                                                        /***/
-                    ?: throw FogMachineException("Error: Longitude should not be set more than once!")             /***/
+                    ?: throw FogMachineException("Longitude should not be set more than once!")             /***/
             }                                                                                                      /***/
             catch (nfe : NumberFormatException) {                                                                  /***/
-                throw FogMachineException("Error: Longitude not a valid value: $value", nfe)                       /***/
+                throw FogMachineException("Longitude not a valid value: $value", nfe)                       /***/
             }                                                                                                      /***/
         }                                                                                                          /***/
     private var lngSet = false                                                                                     /***/
-    private var mutableLongitude : BigDecimal = BigDecimal.ZERO                                                    /***/
+    private lateinit var mutableLongitude : BigDecimal                                                   /***/
     /**==============================================================================================================**/
     /**=============================================================================================================***/
     /**
      * The Latitude of the Zone, which is at the bottom left starting point. Any [BigDecimal] supported datatype
      * is also supported.
      *
-     * @throws FogMachineException If Latitude was already set or is being set with an unsupported type.
+     * @throws FogMachineException If:
+     *  - Latitude was already set.
+     *  - It is being set with an unsupported type.
+     *  - Given scale (i.e. number of significant decimal places) is larger than the Zone Coarseness scale.
      */
     var latitude: Any                                                                                              /***/
     get() = mutableLatitude                                                                                        /***/
@@ -309,13 +316,13 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             mutableLatitude = BigDecimal(value.toString())                                                         /***/
                 .takeIf { !latSet }                                                                                /***/
                 .also { latSet = true }                                                                            /***/
-                ?: throw FogMachineException("Error: Latitude should not be set more than once!")                  /***/
+                ?: throw FogMachineException("Latitude should not be set more than once!")                  /***/
         } catch (nfe: NumberFormatException) {                                                                     /***/
-            throw FogMachineException("Error: Latitude not a valid value: $value", nfe)                            /***/
+            throw FogMachineException("Latitude not a valid value: $value", nfe)                            /***/
         }                                                                                                          /***/
     }                                                                                                              /***/
     private var latSet = false                                                                                     /***/
-    private var mutableLatitude : BigDecimal = BigDecimal.ZERO                                                     /***/
+    private lateinit var mutableLatitude : BigDecimal                                                    /***/
     /**=============================================================================================================***/
     /**==============================================================================================================**/
     /**
@@ -326,12 +333,12 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
      */
     var tyleCoarseness: Coarseness                                                                                 /***/
         get() = Coarseness.values().find { BigDecimal.ONE.movePointLeft(it.ordinal) == mutableTyleCoarseness }     /***/
-                ?: throw FogMachineException("Error: Invalid Tyle coarseness value: $mutableTyleCoarseness")       /***/
+                ?: throw FogMachineException("Tyle Coarseness must be specified!")                                 /***/
         set(value) {                                                                                               /***/
             mutableTyleCoarseness = BigDecimal.ONE.movePointLeft(value.ordinal)                                    /***/
                 .takeIf { !tCSet }                                                                                 /***/
                 .also { tCSet = true }                                                                             /***/
-                ?: throw FogMachineException("Error: Tyle coarseness should not be set more than once!")           /***/
+                ?: throw FogMachineException("Tyle coarseness should not be set more than once!")                  /***/
         }                                                                                                          /***/
     private var tCSet = false                                                                                      /***/
     private var mutableTyleCoarseness : BigDecimal = BigDecimal.ZERO                                               /***/
@@ -363,12 +370,20 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
              */
             infix fun lat(lat: Any) {
                 try {
+                    mutableLongitude = BigDecimal(lng.toString())
+                        .takeIf { !lngSet }
+                        .also { lngSet = true }
+                        ?: throw FogMachineException("Longitude should not be set more than once!")
+                } catch (nfe: NumberFormatException) {
+                    throw FogMachineException("Longitude not a valid value: $lat", nfe)
+                }
+                try {
                     mutableLatitude = BigDecimal(lat.toString())
                         .takeIf { !latSet }
                         .also { latSet = true }
-                        ?: throw FogMachineException("Error: Latitude should not be set more than once!")
+                        ?: throw FogMachineException("Latitude should not be set more than once!")
                 } catch (nfe: NumberFormatException) {
-                    throw FogMachineException("Error: Latitude not a valid value: $lat", nfe)
+                    throw FogMachineException("Latitude not a valid value: $lat", nfe)
                 }
             }
         }
@@ -380,12 +395,20 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
              */
             infix fun lng(lng: Any) {
                 try {
+                    mutableLatitude = BigDecimal(lat.toString())
+                        .takeIf { !latSet }
+                        .also { latSet = true }
+                        ?: throw FogMachineException("Latitude should not be set more than once!")
+                } catch (nfe: NumberFormatException) {
+                    throw FogMachineException("Latitude not a valid value: $lat", nfe)
+                }
+                try {
                     mutableLongitude = BigDecimal(lng.toString())
                         .takeIf { !lngSet }
                         .also { lngSet = true }
-                        ?: throw FogMachineException("Error: Longitude should not be set more than once!")
+                        ?: throw FogMachineException("Longitude should not be set more than once!")
                 } catch (nfe: NumberFormatException) {
-                    throw FogMachineException("Error: Longitude not a valid value: $lng", nfe)
+                    throw FogMachineException("Longitude not a valid value: $lng", nfe)
                 }
             }
         }
@@ -413,14 +436,17 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
          *
          * (Ex. `coarseness tyle MEDIUM zone COARSE`)
          */
-        inner class CoarseTyle(private val tyle: Any) {
+        inner class CoarseTyle(private val tyle: Coarseness) {
             /**
              * Nested infix function to define Zone Coarseness.
              */
             infix fun zone(zone: Coarseness) {
-                    mutableTyleCoarseness = if (!tCSet) BigDecimal.ONE.movePointLeft(zone.ordinal)
-                        .also { tCSet = true }
-                        else throw FogMachineException("Error: Tyle coarseness should not be set more than once!")
+                mutableTyleCoarseness = if (!tCSet) BigDecimal.ONE.movePointLeft(tyle.ordinal)
+                    .also { tCSet = true }
+                else throw FogMachineException("Tyle coarseness should not be set more than once!")
+                mutableZoneCoarseness = if (!zCSet) BigDecimal.ONE.movePointLeft(zone.ordinal)
+                    .also { zCSet = true }
+                    else throw FogMachineException("Zone coarseness should not be set more than once!")
             }
         }
         /**
@@ -428,14 +454,17 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
          *
          * (Ex. `coarseness zone COARSE tyle MEDIUM`)
          */
-        inner class CoarseZone(private val zone: Any) {
+        inner class CoarseZone(private val zone: Coarseness) {
             /**
              * Nested infix function to define Tyle Coarseness.
              */
             infix fun tyle(tyle: Coarseness) {
-                    mutableZoneCoarseness =  if (!zCSet) BigDecimal.ONE.movePointLeft(tyle.ordinal)
-                        .also { zCSet = true }
-                        else throw FogMachineException("Error: Zone coarseness should not be set more than once!")
+                mutableZoneCoarseness = if (!zCSet) BigDecimal.ONE.movePointLeft(zone.ordinal)
+                    .also { zCSet = true }
+                else throw FogMachineException("Zone coarseness should not be set more than once!")
+                mutableTyleCoarseness =  if (!tCSet) BigDecimal.ONE.movePointLeft(tyle.ordinal)
+                    .also { tCSet = true }
+                    else throw FogMachineException("Tyle coarseness should not be set more than once!")
             }
         }
     }
@@ -451,14 +480,24 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
      * Coarseness scales, duplicate holes, or out of bounds holes.
      */
     internal fun build() {
+        if (!pathSet)
+            throw FogMachineException("Path must be set!")
+        if (!lngSet)
+            throw FogMachineException("Longitude must be specified!")
+        if (!latSet)
+            throw FogMachineException("Latitude must be specified!")
+        if (!tCSet)
+            throw FogMachineException("Tyle and Zone Coarseness must be specified!")
+        if (!zCSet)
+            throw FogMachineException("Tyle and Zone Coarseness must be specified!")
         if (mutableTyleCoarseness > mutableZoneCoarseness)
-            throw FogMachineException("Error: Tyle Coarseness cannot be larger than Zone Coarseness!")
-        if(mutableLongitude.scale() > mutableTyleCoarseness.scale())
-            throw FogMachineException("Error: Longitude scale ${mutableLongitude.scale()} cannot be larger " +
-                    "than Tyle Coarseness scale ${mutableTyleCoarseness.scale()} (${tyleCoarseness.name})!")
-        if(mutableLatitude.scale() > mutableTyleCoarseness.scale())
-            throw FogMachineException("Error: Latitude scale ${mutableLatitude.scale()} cannot be larger " +
-                    "than Tyle Coarseness scale ${mutableTyleCoarseness.scale()} (${tyleCoarseness.name})!")
+            throw FogMachineException("Tyle Coarseness cannot be larger than Zone Coarseness!")
+        if (mutableLongitude.scale() > mutableZoneCoarseness.scale())
+            throw FogMachineException("Longitude scale ${mutableLongitude.scale()} cannot be larger " +
+                    "than Zone Coarseness scale ${zoneCoarseness.name} (${mutableZoneCoarseness.scale()})!")
+        if (mutableLatitude.scale() > mutableZoneCoarseness.scale())
+            throw FogMachineException("Latitude $mutableLatitude scale (${mutableLatitude.scale()}) cannot be larger " +
+                    "than Zone Coarseness scale ${zoneCoarseness.name} (${mutableZoneCoarseness.scale()})!")
         if (tyleCoarseness == Coarseness.FINE
             && (zoneCoarseness == Coarseness.SUPER_COARSE
                     || zoneCoarseness == Coarseness.SUPER_DUPER_COARSE))
@@ -473,28 +512,34 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
                 is String -> handleStringHoleCoordinates(it.coordinates)
                 is Pair<*, *> -> handlePairHoleCoordinates(it.coordinates)
                 is List<*> -> handleListHoleCoordinates(it.coordinates)
-                else -> throw FogMachineException("Error: Invalid coordinates format: ${it.coordinates}")
+                else -> throw FogMachineException("Invalid coordinates format: ${it.coordinates}")
             }
             when (it.ids) {
                 null -> {}
                 is String -> handleStringHoleIDs(it.ids)
                 is List<*> -> handleListHoleIDs(it.ids)
-                is Int -> handleNumberHoleIDs(it.ids)
-                else -> throw FogMachineException("Error: Invalid IDs format: ${it.ids}")
+                is Int, is Long, is BigInteger -> handleNumberHoleIDs(it.ids)
+                else -> throw FogMachineException("Invalid IDs format: ${it.ids}")
             }
         }
 
         // Check for duplicate holes
         if (mutableLngLatHoles.distinct().count() != mutableLngLatHoles.count()) {
-            throw FogMachineException("Error: Duplicate holes are not allowed!")
+            throw FogMachineException("Duplicate holes are not allowed!")
         }
 
-        // Check for holes outside geographic area
+        // Check for holes outside geographic area and if scales are mismatched
         mutableLngLatHoles.forEach {
-            if (it.first < mutableLongitude || it.first > mutableLongitude.add(mutableZoneCoarseness)
-                || it.second < mutableLatitude || it.second > mutableLatitude.add(mutableZoneCoarseness)) {
-                throw FogMachineException("Error: hole $it was out of bounds of generated area!")
+            if (it.first < mutableLongitude || it.first >= mutableLongitude.add(mutableZoneCoarseness)
+                || it.second < mutableLatitude || it.second >= mutableLatitude.add(mutableZoneCoarseness)) {
+                throw FogMachineException("hole $it was out of bounds of generated area!")
             }
+            if (it.first.scale() > mutableTyleCoarseness.scale())
+                throw FogMachineException("Scale of hole at longitude ${it.first} (${it.first.scale()}) " +
+                        "must match Tyle Coarseness scale ${mutableTyleCoarseness.scale()} (${tyleCoarseness.name})!")
+            else if (it.second.scale() > mutableTyleCoarseness.scale())
+                throw FogMachineException("Scale of hole at latitude ${it.second} (${it.second.scale()}) " +
+                        "must match Tyle Coarseness scale ${mutableTyleCoarseness.scale()} (${tyleCoarseness.name})!")
         }
 
         // Send Zone to FogMachine
@@ -514,7 +559,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             id = BigDecimal(hole)
         }
         catch (nfe : NumberFormatException) {
-            throw FogMachineException("Error: invalid ID format! $hole")
+            throw FogMachineException("invalid ID format! $hole")
         }
         val numLength = mutableZoneCoarseness.divide(mutableTyleCoarseness)
         val xVal = id.remainder(numLength)
@@ -522,7 +567,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
 
         val maxID = numLength.pow(2).minus(BigDecimal.ONE)
         if(id < BigDecimal.ZERO || id > maxID) {
-            throw FogMachineException("Error: ID out of bounds! Range: [0, $maxID]  ID: $hole")
+            throw FogMachineException("ID out of bounds! Range: [0, $maxID]  ID: $hole")
         }
 
         mutableLngLatHoles.add(
@@ -533,19 +578,19 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
         )
     }
     /**
-     * Parse and consume an [Int] that describes a particular Tyle Polygons' ID.
+     * Parse and consume an value that describes a particular Tyle Polygons' ID.
      * @param hole The integer that describes the ID of the Tyle to be removed.
-     * @throws FogMachineException If parsed ID is out of bounds.
+     * @throws FogMachineException If hole is not a supported value, or if parsed ID is out of bounds.
      */
-    override fun handleNumberHoleIDs(hole : Int) {
+    override fun handleNumberHoleIDs(hole : Any) {
         val id = BigDecimal(hole.toString())
         val numLength = mutableZoneCoarseness.divide(mutableTyleCoarseness)
         val xVal = id.remainder(numLength)
         val yVal = BigDecimal(id.toInt() / numLength.toInt())
 
         val maxID = numLength.pow(2).minus(BigDecimal.ONE)
-        if(hole < 0 || hole > numLength.pow(2).toInt() - 1) {
-            throw FogMachineException("Error: ID out of bounds! Range: [0, $maxID]  ID: $hole")
+        if(id.toInt() < 0 || id.toInt() > numLength.pow(2).toInt() - 1) {
+            throw FogMachineException("ID out of bounds! Range: [0, $maxID]  ID: $hole")
         }
 
         mutableLngLatHoles.add(
@@ -566,7 +611,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             when (hole) {
                 is String -> handleStringHoleIDs(hole)
                 is Int -> handleNumberHoleIDs(hole)
-                else -> throw FogMachineException("Error: Unsupported item(s) in list! $holes")
+                else -> throw FogMachineException("Unsupported item(s) in list! $holes")
             }
         }
     }
@@ -581,17 +626,20 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
         first = when (hole.first) {
             is BigDecimal -> (hole.first as BigDecimal)
             is String, is Number -> BigDecimal(hole.first.toString())
-            else -> throw FogMachineException("Error: Unsupported Pair Object!")
+            else -> throw FogMachineException("Unsupported Pair Object!")
         }
         second = when (hole.second) {
             is BigDecimal -> (hole.second as BigDecimal)
             is String, is Number -> BigDecimal(hole.second.toString())
-            else -> throw FogMachineException("Error: Unsupported Pair Object!")
+            else -> throw FogMachineException("Unsupported Pair Object!")
         }
 
-        if (first.scale() > mutableTyleCoarseness.scale() || second.scale() > mutableTyleCoarseness.scale())
-            throw FogMachineException("Error: Scale of coordinates ($first, $second) " +
-                    "must match Tyle Coarseness $mutableTyleCoarseness scale!")
+        if (first.scale() > mutableTyleCoarseness.scale())
+            throw FogMachineException("Scale of hole at longitude $first (${first.scale()}) cannot be larger " +
+                    "than Tyle Coarseness scale ${tyleCoarseness.name} (${mutableTyleCoarseness.scale()})!")
+        else if (second.scale() > mutableTyleCoarseness.scale())
+            throw FogMachineException("Scale of hole at latitude $second (${second.scale()}) cannot be larger " +
+                    "than Tyle Coarseness scale ${tyleCoarseness.name} (${mutableTyleCoarseness.scale()})!")
 
         mutableLngLatHoles.add(
             Pair(
@@ -609,7 +657,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
     override fun handleListHoleCoordinates(holes : List<*>) {
         val filteredHoles = holes.filterIsInstance<Pair<BigDecimal, BigDecimal>>()
         if(filteredHoles.count() < holes.count()) {
-            throw FogMachineException("Error: Unsupported item(s) in list! $holes")
+            throw FogMachineException("Unsupported item(s) in list! $holes")
         }
         for (hole in filteredHoles) {
             handlePairHoleCoordinates(hole)
@@ -628,31 +676,42 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
      * Longitude/Latitude & Zone Coarseness scales, duplicate holes, or out of bounds holes.
      */
     internal fun build() {
+        if (mutablePath == "")
+            throw FogMachineException("Path must be set!")
         // Handle holes only after build() is called; this ensures mutableZoneCoarseness has been defined
+        // Send specified hole data to corresponding handler
         for (hole in mutableHoles) {
             when (hole.coordinates) {
                 null -> {}
                 is String -> handleStringHoleCoordinates(hole.coordinates)
                 is Pair<*, *> -> handlePairHoleCoordinates(hole.coordinates)
                 is List<*> -> handleListHoleCoordinates(hole.coordinates)
-                else -> throw FogMachineException("Error: Invalid coordinates format: ${hole.coordinates}")
+                else -> throw FogMachineException("Invalid coordinates format: ${hole.coordinates}")
             }
             when (hole.ids) {
                 null -> {}
                 is String -> handleStringHoleIDs(hole.ids)
                 is List<*> -> handleListHoleIDs(hole.ids)
-                is Int -> handleNumberHoleIDs(hole.ids)
-                else -> throw FogMachineException("Error: Invalid IDs format: ${hole.ids}")
+                is Int, is Long, is BigInteger, is BigDecimal -> handleNumberHoleIDs(hole.ids)
+                else -> throw FogMachineException("Invalid IDs format: ${hole.ids}")
             }
         }
 
+        // Check for duplicate holes
+        if (mutableLngLatHoles.distinct().count() != mutableLngLatHoles.count()) {
+            throw FogMachineException("Duplicate holes are not allowed!")
+        }
+
+        // Check if hole scales are mismatched
         mutableLngLatHoles.forEach {
-            if(it.first.scale() > mutableZoneCoarseness.scale())
-                throw FogMachineException("Error: Longitude scale ${it.first.scale()} cannot be larger " +
-                        "than Zone Coarseness scale ${mutableZoneCoarseness.scale()} (${zoneCoarseness.name})!")
-            if(it.second.scale() > mutableZoneCoarseness.scale())
-                throw FogMachineException("Error: Latitude scale ${it.second.scale()} cannot be larger " +
-                        "than Zone Coarseness scale ${mutableZoneCoarseness.scale()} (${zoneCoarseness.name})!")
+            if (it.first.scale() > mutableZoneCoarseness.scale())
+                throw FogMachineException("Scale of hole at longitude ${it.first} (${it.first.scale()}) " +
+                        "cannot be larger than Zone Coarseness scale ${zoneCoarseness.name} " +
+                        "(${mutableZoneCoarseness.scale()})!")
+            else if (it.second.scale() > mutableZoneCoarseness.scale())
+                throw FogMachineException("Scale of hole at latitude ${it.second} (${it.second.scale()}) " +
+                        "cannot be larger than Zone Coarseness scale ${zoneCoarseness.name} " +
+                        "(${mutableZoneCoarseness.scale()})!")
         }
 
         if (mutableLngLatHoles.isEmpty() && Coarseness.values()
@@ -668,18 +727,19 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
      */
     override fun handleStringHoleIDs(hole: String) {
         try {
-            mutableLngLatHoles.add(reverseCantor(hole.toInt()))
+            mutableLngLatHoles.add(inverseCantor(BigDecimal(hole)))
         }
         catch (nfe: NumberFormatException) {
-            throw FogMachineException("Error: invalid ID format! $hole")
+            throw FogMachineException("Invalid ID format! $hole")
         }
     }
     /**
-     * Parse and consume a [Int] that describes a particular Zones' ID (file name).
+     * Parse and consume a value that describes a particular Zones' ID (file name).
      * @param hole The hole that describes the ID of the Zone to be removed.
+     * @throws FogMachineException If hole is not a supported value.
      */
-    override fun handleNumberHoleIDs(hole : Int) {
-            mutableLngLatHoles.add(reverseCantor(hole))
+    override fun handleNumberHoleIDs(hole : Any) {
+        mutableLngLatHoles.add(inverseCantor(BigDecimal(hole.toString())))
     }
     /**
      * Parse and consume a [List] that describes one or more Zones' ID (file name). The list must consist only of
@@ -692,7 +752,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             when (hole) {
                 is String -> handleStringHoleIDs(hole)
                 is Int -> handleNumberHoleIDs(hole)
-                else -> throw FogMachineException("Error: Unsupported item(s) in list! $holes")
+                else -> throw FogMachineException("Unsupported item(s) in list! $holes")
             }
         }
     }
@@ -707,17 +767,20 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
         first = when (hole.first) {
             is BigDecimal -> (hole.first as BigDecimal)
             is String, is Number -> BigDecimal(hole.first.toString())
-            else -> throw FogMachineException("Error: Unsupported Pair Object!")
+            else -> throw FogMachineException("Unsupported Pair Object!")
         }
         second = when (hole.second) {
             is BigDecimal -> (hole.second as BigDecimal)
             is String, is Number -> BigDecimal(hole.second.toString())
-            else -> throw FogMachineException("Error: Unsupported Pair Object!")
+            else -> throw FogMachineException("Unsupported Pair Object!")
         }
 
-        if (first.scale() > mutableZoneCoarseness.scale() || second.scale() > mutableZoneCoarseness.scale())
-            throw FogMachineException("Error: Scale of coordinates ($first, $second)" +
-                    " must match Zone Coarseness $mutableZoneCoarseness scale!")
+        if (first.scale() > mutableZoneCoarseness.scale())
+            throw FogMachineException("Scale of hole at longitude $first (${first.scale()}) cannot be larger " +
+                    "than Zone Coarseness scale ${zoneCoarseness.name} (${mutableZoneCoarseness.scale()})!")
+        else if (second.scale() > mutableZoneCoarseness.scale())
+            throw FogMachineException("Scale of hole at latitude $second (${second.scale()}) cannot be larger " +
+                    "than Zone Coarseness scale ${zoneCoarseness.name} (${mutableZoneCoarseness.scale()})!")
 
         mutableLngLatHoles.add(
             Pair(
@@ -735,7 +798,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
     override fun handleListHoleCoordinates(holes : List<*>) {
         val filteredHoles = holes.filterIsInstance<Pair<BigDecimal, BigDecimal>>()
         if(filteredHoles.count() < holes.count()) {
-            throw FogMachineException("Error: Unsupported item(s) in list! $holes")
+            throw FogMachineException("Unsupported item(s) in list! $holes")
         }
         for (hole in filteredHoles) {
             handlePairHoleCoordinates(hole)
@@ -743,18 +806,46 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
     }
 
     /**
-     * An implementation of the Inverse of the Cantor Pairing Function, π(x, y).
+     * An implementation of the Inverse of the Cantor Pairing Function, π(x, y) to encode the Longtiude and Latitude
+     * of a Zone into an ID.
      *
-     * This function returns a [Pair] of [BigDecimal] natural numbers such that [value] = π(x, y). [value] must be
-     * a natural number (i.e an integer > 0).
+     * This function returns a [Pair] of [BigDecimal] natural numbers such that [value] = π(x, y),
+     * adjusted to longitude/latitude coordinates. [value] must be a natural number (i.e an integer > 0).
      * @param value The value to be used in the Inverse Cantor Pairing Function.
      * @throws FogMachineException if [value] is not a natural number.
+     *  * - `FINE` -               0.0001 DD
+     *  * - `MEDIUM` -             0.001 DD
+     *  * - `COARSE` -             0.01 DD
+     *  * - `SUPER_COARSE` -       0.1 DD
+     *  * - `SUPER_DUPER_COARSE` - 1 DD
      */
-    private fun reverseCantor(value: Int) : Pair<BigDecimal, BigDecimal> {
-        if (value < 1) throw FogMachineException("Inverse Cantor Paring Function may only use natural numbers! $value")
-        val lng: BigDecimal
-        val lat: BigDecimal
-        val multiplicand = BigDecimal("0.1")
+    private fun inverseCantor(value: BigDecimal) : Pair<BigDecimal, BigDecimal> {
+        if (value < BigDecimal.ONE || value.scale() != 0)
+            throw FogMachineException("Hole ID invalid!. IDs may only be natural numbers! $value")
+
+        val multiplicand = BigDecimal.ONE.movePointLeft(zoneCoarseness.ordinal)
+
+        val t = floor(
+            (-BigDecimal.ONE + BigDecimal(sqrt((BigDecimal.ONE + BigDecimal.valueOf(8) * value).toDouble()))
+                .divide(BigDecimal.valueOf(2), RoundingMode.FLOOR)
+            ).toDouble())
+
+        val lng = (BigDecimal(t).multiply(BigDecimal(t + 3)).divide(BigDecimal.valueOf(2)))
+            .subtract(value)
+            .multiply(multiplicand)
+            .subtract(BigDecimal.valueOf(180))
+
+        val lat = (value - BigDecimal(t).multiply(BigDecimal(t + 1)).divide(BigDecimal.valueOf(2)))
+            .multiply(multiplicand)
+            .subtract(BigDecimal.valueOf(90))
+
+        if (lng < BigDecimal.valueOf(-180) || lng > BigDecimal.valueOf(180)
+            || lat < BigDecimal.valueOf(-90) || lat > BigDecimal.valueOf(90))
+            throw FogMachineException("Hole ID invalid! Decoded Latitude/Longitude values were out of valid range.")
+        return Pair(lng, lat)
+        //-73.459 40.874
+        //val multiplicand = BigDecimal("0.1")
+        /*val multiplicand = BigDecimal.ONE.movePointLeft(zoneCoarseness.ordinal - 1)
         val t: Int = floor((-1 + sqrt((1 + 8 * value).toDouble())) / 2).toInt()
         lng = BigDecimal(t * (t + 3) / 2 - value)
             .multiply(multiplicand)
@@ -762,7 +853,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
         lat = BigDecimal(value - t * (t + 1) / 2)
             .multiply(multiplicand)
             .minus(BigDecimal(90))
-        return Pair(lng, lat)
+        return Pair(lng, lat)*/
     }
 }
 
@@ -791,7 +882,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             mutableName = this@value.lowercase(Locale.getDefault())
                 .takeIf { !nameSet }
                 .also { nameSet = true }
-                ?: throw FogMachineException("Error: Property name should not be set more than once! ${this@value}")
+                ?: throw FogMachineException("Property name should not be set more than once! ${this@value}")
             value = propertyValue
         }.build())
     }
@@ -812,7 +903,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             mutableName = value.lowercase(Locale.getDefault())                                                     /***/
                 .takeIf{ !nameSet }                                                                                /***/
                 .also { nameSet = true }                                                                           /***/
-                ?: throw FogMachineException("Error: Property name should not be set more than once!")             /***/
+                ?: throw FogMachineException("Property name should not be set more than once!")             /***/
         }                                                                                                          /***/
     var mutableName: String = ""                                                                                   /***/
     var nameSet = false                                                                                            /***/
@@ -826,7 +917,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
         get() = mutableValue                                                                                       /***/
         set(value) {                                                                                               /***/
         if (valueSet)                                                                                              /***/
-            throw FogMachineException("Error: Property \"$name\" value should not be set more than once! $value")  /***/
+            throw FogMachineException("Property \"$name\" value should not be set more than once! $value")  /***/
         mutableValue = if (value is String) "\"" + value +  "\"" else value                                        /***/
         valueSet = true                                                                                            /***/
     }                                                                                                              /***/
@@ -841,7 +932,6 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
     fun build() : Property {
         nameSet = false
         valueSet = false
-        println("Successfully built: $name: $value")
         return Property(mutableName, mutableValue)
     }
 }
@@ -919,7 +1009,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             mutableCoordinates = value                                                                             /***/
                 .takeIf { !coordsSet }                                                                             /***/
                 .also { coordsSet = true }                                                                         /***/
-                ?: throw FogMachineException("Error: Hole Coordinates should not be set more than once!")          /***/
+                ?: throw FogMachineException("Hole Coordinates should not be set more than once!")                 /***/
         }                                                                                                          /***/
     private var coordsSet = false                                                                                  /***/
     protected var mutableCoordinates: Any? = null                                                                  /***/
@@ -935,7 +1025,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             mutableIds = value                                                                                     /***/
                 .takeIf { !idsSet }                                                                                /***/
                 .also { idsSet = true }                                                                            /***/
-                ?: throw FogMachineException("Error: Hole IDs should not be set more than once!")                  /***/
+                ?: throw FogMachineException("Hole IDs should not be set more than once!")                         /***/
         }                                                                                                          /***/
     private var idsSet = false                                                                                     /***/
     protected var mutableIds: Any? = null                                                                          /***/
@@ -946,13 +1036,27 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
  * A generic Builder class that houses the shared parameters used in [ZoneBuilder] and [MystBuilder].
  */
 @FogDSL abstract class FogBuilder {
+
+    /**Shorter definitions of each [Coarseness] level for more readability in infix functions.*/
     /**
-     * Shorter definitions of each [Coarseness] level for more readability in infix functions.
+     * Coarseness Δ0.0001. Ex. Longitude: -2.2945, Latitude: 48.8582
      */
     val FINE: Coarseness = Coarseness.FINE
+    /**
+     * Coarseness Δ0.001. Ex. Longitude: -2.294, Latitude: 48.858
+     */
     val MEDIUM: Coarseness = Coarseness.MEDIUM
+    /**
+     * Coarseness Δ0.01. Ex. Longitude: -2.29, Latitude: 48.85
+     */
     val COARSE: Coarseness = Coarseness.COARSE
+    /**
+     * Coarseness Δ0.1. Ex. Longitude: -2.2, Latitude: 48.8
+     */
     val SUPER_COARSE: Coarseness = Coarseness.SUPER_COARSE
+    /**
+     * Coarseness Δ1. Ex. Longitude: -2, Latitude: 48
+     */
     val SUPER_DUPER_COARSE: Coarseness = Coarseness.SUPER_DUPER_COARSE
 
     /**==============================================================================================================**/
@@ -966,26 +1070,26 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
             mutablePath = (value.takeIf { it.endsWith(".geojson") } ?: "$value.geojson")                     /***/
                 .takeIf { !pathSet }                                                                               /***/
                 .also { pathSet = true }                                                                           /***/
-                ?: throw FogMachineException("Error: Path should not be set more than once!")                      /***/
+                ?: throw FogMachineException("Path should not be set more than once!")                             /***/
         }                                                                                                          /***/
-    private var pathSet = false                                                                                    /***/
-    protected var mutablePath : String = ""                                                                        /***/
+    protected var pathSet = false                                                                                  /***/
+    protected lateinit var mutablePath : String                                                                    /***/
     /**==============================================================================================================**/
     /**==============================================================================================================**/
     /**
      * The Zone Coarseness of the file, which defines the length and width of the generated area in `zone = {...}`,
-     * or the length and width of any holes specified in `myst = {...}`. See [Coarseness]
+     * or the length and width of any holes specified in `myst = {...}`. See [Coarseness].
      * for available values.
      * @throws FogMachineException If Zone Coarseness was already set or is not set when holes are specified.
      */
     var zoneCoarseness: Coarseness                                                                                 /***/
         get() = Coarseness.values().find { BigDecimal.ONE.movePointLeft(it.ordinal) == mutableZoneCoarseness }     /***/
-            ?: throw FogMachineException("Error: Zone Coarseness is required when holes are specified!")           /***/
+            ?: throw FogMachineException("Zone Coarseness must be specified!")                                     /***/
         set(value) {                                                                                               /***/
             mutableZoneCoarseness = BigDecimal.ONE.movePointLeft(value.ordinal)                                    /***/
                 .takeIf { !zCSet }                                                                                 /***/
                 .also { zCSet = true }                                                                             /***/
-                ?: throw FogMachineException("Error: Zone Coarseness should not be set more than once!")           /***/
+                ?: throw FogMachineException("Zone Coarseness should not be set more than once!")                  /***/
         }                                                                                                          /***/
     protected var zCSet = false                                                                                    /***/
     protected var mutableZoneCoarseness : BigDecimal = BigDecimal.ZERO                                             /***/
@@ -1007,7 +1111,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
         mutableProperties.addAll(PROPERTIES().apply(block))                                                        /***/
         mutableProperties.forEach { when(it.value) {                                                      /***/
             is String, is Number, is Boolean, is JSONObject, is JSONArray, null -> return@forEach                  /***/
-            else -> throw FogMachineException("Error: Property: ${it.name} has an unsupported value: ${it.value}") /***/
+            else -> throw FogMachineException("Property: ${it.name} has an unsupported value: ${it.value}") /***/
             }                                                                                                      /***/
         }                                                                                                          /***/
     }                                                                                                              /***/
@@ -1020,7 +1124,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
 
     abstract fun handleStringHoleIDs(hole: String)
 
-    abstract fun handleNumberHoleIDs(hole : Int)
+    abstract fun handleNumberHoleIDs(hole : Any)
 
     abstract fun handleListHoleIDs(holes : List<*>)
 
@@ -1069,7 +1173,7 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
         catch (ex: Exception){
             when (ex) {
                 is NumberFormatException, is IndexOutOfBoundsException -> {
-                    throw FogMachineException("Error: Invalid hole format! $hole")
+                    throw FogMachineException("Invalid hole format! $hole")
                 }
                 else -> throw(ex)
             }
@@ -1096,9 +1200,24 @@ fun myst(block: MystBuilder.() -> Unit): Unit = MystBuilder().apply(block).build
  * - `SUPER_DUPER_COARSE` - 1 DD
  */
 @FogDSL enum class Coarseness {
+    /**
+     * Coarseness Δ1. Ex. Longitude: -2, Latitude: 48
+     */
     SUPER_DUPER_COARSE,     // Δ1
+    /**
+     * Coarseness Δ0.1. Ex. Longitude: -2.2, Latitude: 48.8
+     */
     SUPER_COARSE,           // Δ0.1
+    /**
+     * Coarseness Δ0.01. Ex. Longitude: -2.29, Latitude: 48.85
+     */
     COARSE,                 // Δ0.01
+    /**
+     * Coarseness Δ0.001. Ex. Longitude: -2.294, Latitude: 48.858
+     */
     MEDIUM,                 // Δ0.001
+    /**
+     * Coarseness Δ0.0001. Ex. Longitude: -2.2945, Latitude: 48.8582
+     */
     FINE                    // Δ0.0001
 }
